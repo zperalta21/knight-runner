@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CUSTOMIZATION AND ADJUSTMENT: Change the browser tab title here. -->
+  <title>Knight Runner</title>
+
+  <meta name="description" content="Leap through a moonlit castle hallway as a cartoon knight in this medieval fantasy endless runner.">
+
+  <!-- CUSTOMIZATION AND ADJUSTMENT: Change the Open Graph title here. -->
+  <meta property="og:title" content="Knight Runner">
+
+  <!-- CUSTOMIZATION AND ADJUSTMENT: Change the Open Graph description here. -->
+  <meta property="og:description" content="Leap through a moonlit castle hallway as a cartoon knight in this medieval fantasy endless runner.">
+
+  <!-- CUSTOMIZATION AND ADJUSTMENT: Replace this placeholder with the public URL of your game. -->
+  <meta property="og:url" content="https://example.com/knight-runner">
+
+  <!-- CUSTOMIZATION AND ADJUSTMENT: Replace this placeholder with the public URL of a preview image. -->
+  <meta property="og:image" content="https://example.com/knight-runner-preview.png">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <!-- CUSTOMIZATION AND ADJUSTMENT: Change the main displayed game title here. -->
+      <h1 id="gameTitle">Knight Runner</h1>
+
+      <!-- CUSTOMIZATION AND ADJUSTMENT: Change the game description here. -->
+      <p id="gameDescription">
+        Race through an endless, shadowy castle hallway as a cartoon knight.
+        Jump over goblins and rival knights, and watch for ghosts and ravens
+        among the weathered stone arches.
+      </p>
+    </header>
+
+    <section aria-label="Knight Runner game">
+      <div class="scoreboard" aria-label="Game scores">
+        <p>Score: <span id="scoreDisplay">0</span></p>
+        <p>High score: <span id="highScoreDisplay">0</span></p>
+      </div>
+
+      <div class="game-container">
+        <canvas
+          id="gameCanvas"
+          width="960"
+          height="450"
+          aria-label="Knight Runner game. Jump over obstacles to keep running."
+        >
+          Your browser does not support HTML Canvas. Please try a modern browser.
+        </canvas>
+
+        <div id="gameOverlay" role="dialog" aria-labelledby="overlayTitle" aria-describedby="overlayMessage">
+          <!-- CUSTOMIZATION AND ADJUSTMENT: Change the Game Over heading here. -->
+          <h2 id="overlayTitle">Ready, Knight?</h2>
+
+          <!-- CUSTOMIZATION AND ADJUSTMENT: Change the Game Over message here. -->
+          <p id="overlayMessage">Jump over the obstacles and see how far you can run!</p>
+
+          <!-- CUSTOMIZATION AND ADJUSTMENT: Change the Start and Restart button labels here. -->
+          <button
+            id="startButton"
+            type="button"
+            data-start-text="Start Game"
+            data-restart-text="Restart Game"
+          >Start Game</button>
+        </div>
+      </div>
+
+      <!-- CUSTOMIZATION AND ADJUSTMENT: Change the gameplay instructions here. -->
+      <p id="gameInstructions">
+        Press Space or Arrow Up, click, or tap to jump.
+      </p>
+
+      <p id="assetStatus" role="status" aria-live="polite">Loading game…</p>
+    </section>
+  </main>
+</body>
+</html>
